@@ -21,16 +21,16 @@ Structure:
 
 :Note: The important parts are inside 'tests', the other folders are generated with Laravel.
 
--test
-|-Browser
-  |-Components
-  |-console
-  |-Pages
-    |-ExampleTestPage.php
-  |-screenshots
-  |-ExampleTestTest.php
-|-Feature
-  |-ExampleTest.feature
-|-CreatesApplication.php
-|-DuskTestCase.php
-|-TestCase.php
+|-test
+  |-Browser
+    |-Components
+    |-console
+    |-Pages
+      |-ExampleTestPage.php
+    |-screenshots
+    |-ExampleTestTest.php
+  |-Feature
+    |-ExampleTest.feature
+  |-CreatesApplication.php
+  |-DuskTestCase.php
+  |-TestCase.php
