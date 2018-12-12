@@ -1,0 +1,43 @@
+ORIGINAL TEST
+
+public function testBasicTest()
+{
+    $response = $this->get('/');
+
+    $response->assertSee('Laravel');
+    $response->assertStatus(200);
+}
+
+NEW CODE
+
+public function testBasicTest()
+{
+    $response = $this->get('/');
+                    ->touch('GITHUB');
+
+    $response->assertLocation('https://github.com/laravel/laravel');
+}
+
+APPLICATION TESTING
+
+$this->browse(function (Browser $browser) {
+    $browser->visit('http://127.0.0.1:8000/')
+            ->clickLink('GitHub')
+            ->assertUrlIs('https://github.com/laravel/laravel');
+});
+
+SELECTORS
+
+".thumbnail > img[alt='Aceite Girasol de Oro x 3000 ML']"
+
+menu: {
+    abarrotes: {
+        self: '.thumbnail > img[alt="Aceite Girasol de Oro x 3500 ML"]''
+    },
+    aseo: {
+        self: 'locator'
+    },
+    b_b: {
+        self: ''
+    }
+}
